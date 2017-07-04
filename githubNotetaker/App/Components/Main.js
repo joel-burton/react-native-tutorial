@@ -7,7 +7,6 @@ import {
     TouchableHighlight,
     ActivityIndicator,
 } from 'react-native';
-
 import api from '../Utils/api';
 import Dashboard from './Dashboard';
 

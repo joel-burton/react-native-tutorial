@@ -4,6 +4,7 @@
  * @flow
  */
 
+import * as firebase from 'firebase';
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -12,8 +13,18 @@ import {
   Text,
   View
 } from 'react-native';
-
 import Main from './App/Components/Main';
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBvqocdatGxccdTFH5FFQ5CZeeXGbLILXE",
+    authDomain: "github-saver-9b85e.firebaseapp.com",
+    databaseURL: "https://github-saver-9b85e.firebaseio.com",
+    projectId: "github-saver-9b85e",
+    storageBucket: "github-saver-9b85e.appspot.com",
+};
+firebase.initializeApp(firebaseConfig);
+
 
 export default class githubNotetaker extends Component {
 
@@ -36,5 +47,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#111111',
   },
 });
+
 
 AppRegistry.registerComponent('githubNotetaker', () => githubNotetaker);
